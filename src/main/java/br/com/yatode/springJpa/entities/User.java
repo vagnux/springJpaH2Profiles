@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class User implements Serializable {
 
@@ -18,6 +20,7 @@ public class User implements Serializable {
 	private String name;
 	private String email;
 	private String phone;
+	@JsonIgnore
 	private String password;
 
 	public Long getId() {
